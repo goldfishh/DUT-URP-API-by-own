@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "UPR教务系统辅助chrome插件",
+	"version": "1.0",
+	"description": "可以使用它来快速评课、监控新成绩等",
+	"author": "goldfish",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["js/fly.js"]
+		}
+	],
+	"web_accessible_resources": 
+	[
+		"inject.js"
+	]
+//	"externally_connectable": {
+//		"matches": ["*://*.dlut.edu.cn/*"]
+//	}
+}
